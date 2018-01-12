@@ -7,6 +7,10 @@ export CLICOLOR=1
 # disable homebrew auto update
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# jenv init
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
 # alias
 alias ll='ls -l'
 alias la='ls -la'
