@@ -8,7 +8,7 @@ export CLICOLOR=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # jenv init
-export PATH="$HOME/.jenv/bin:$PATH"
+export PATH="$HOME/.jenv/bin:/usr/local/sbin:$PATH"
 eval "$(jenv init -)"
 
 # alias
