@@ -7,15 +7,17 @@ export CLICOLOR=1
 # disable homebrew auto update
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# local sbin
+export PATH="/usr/local/sbin:$PATH"
+
 # jenv init
-export PATH="$HOME/.jenv/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
 # alias
-alias ll='ls -l'
-alias la='ls -la'
+alias ll='ls -la'
 alias tree='tree -C'
-alias http='python -m SimpleHTTPServer 8080'
+alias httpy='python -m SimpleHTTPServer 8080'
 
 # bash completion
 for bcfile in /usr/local/etc/bash_completion.d/* ; do
