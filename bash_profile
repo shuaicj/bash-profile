@@ -18,6 +18,8 @@ eval "$(jenv init -)"
 alias ll='ls -la'
 alias tree='tree -C'
 alias httpy='python -m SimpleHTTPServer 8080'
+alias proxyon="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias proxyoff="unset ALL_PROXY"
 
 # bash completion
 for bcfile in /usr/local/etc/bash_completion.d/* ; do
