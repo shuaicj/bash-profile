@@ -27,6 +27,8 @@ alias proxyon="export ALL_PROXY=socks5://127.0.0.1:1080"
 alias proxyoff="unset ALL_PROXY"
 
 # bash completion
-for bcfile in /usr/local/etc/bash_completion.d/* ; do
-  . $bcfile
-done
+# brew install bash-completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
