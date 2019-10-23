@@ -1,3 +1,6 @@
+# the dir of this file
+DIR="$( dirname $( readlink "${BASH_SOURCE[0]}" ) )"
+
 # termial line prefix
 export PS1="\W \u\$ "
 
@@ -23,12 +26,17 @@ eval "$(jenv init -)"
 alias ll='ls -la'
 alias tree='tree -C'
 alias httpy='python -m SimpleHTTPServer 8080'
-alias proxyon="export ALL_PROXY=socks5://127.0.0.1:1080"
-alias proxyoff="unset ALL_PROXY"
+alias sson="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias ssoff="unset ALL_PROXY"
+
+# proxy
+if [ -x $DIR/bash_proxy ]; then
+    . $DIR/bash_proxy
+fi
 
 # bash completion
 # brew install bash-completion
-if [ -f /usr/local/etc/bash_completion ]; then
+if [ -x /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion
 fi
 
