@@ -30,13 +30,13 @@ alias sson="export ALL_PROXY=socks5://127.0.0.1:1080"
 alias ssoff="unset ALL_PROXY"
 
 # proxy
-if [ -x $DIR/bash_proxy ]; then
+if [ -f $DIR/bash_proxy ]; then
     . $DIR/bash_proxy
 fi
 
 # bash completion
 # brew install bash-completion
-if [ -x /usr/local/etc/bash_completion ]; then
+if [ -f /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion
 fi
 
