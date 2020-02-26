@@ -1,6 +1,9 @@
 # the dir of this file
 DIR="$( dirname $( readlink "${BASH_SOURCE[0]}" ) )"
 
+# set lang
+export LANG=C
+
 # termial line prefix
 export PS1="\W \u\$ "
 
@@ -28,6 +31,8 @@ alias tree='tree -C'
 alias httpy='python -m SimpleHTTPServer 8080'
 alias sson="export ALL_PROXY=socks5://127.0.0.1:1080"
 alias ssoff="unset ALL_PROXY"
+alias k="kubectl --kubeconfig=/Users/shuai/.kube/config.rdb -n fws-testing-1"
+alias h="helm --kubeconfig=/Users/shuai/.kube/config.rdb -n fws-testing-1"
 
 # proxy
 if [ -f $DIR/bash_proxy ]; then
