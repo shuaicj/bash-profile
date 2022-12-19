@@ -5,7 +5,7 @@ DIR="$( dirname $( readlink "${BASH_SOURCE[0]}" ) )"
 export LANG=C
 
 # termial line prefix
-export PS1="\W \u\$ "
+export PS1="\[\e[36m\]\u \[\e[34m\]\W \\$\[\e[0m\] "
 
 # add current dir in iTerm2 tab title
 if [ "$ITERM_SESSION_ID" ]; then
@@ -24,6 +24,9 @@ export PATH="/usr/local/sbin:$PATH"
 # jenv init
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# MacPorts path
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # alias
 alias ll='ls -la'
@@ -44,7 +47,4 @@ fi
 if [ -f /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion
 fi
-
-# MacPorts path
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
