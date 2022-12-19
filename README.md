@@ -7,5 +7,5 @@
 ### Mac iTerm2 settings
 * Theme: Dark
 * Font: PT Mono 14 pt.
-* Window Size: Columns 130, Rows 40
+* Window Size: Columns 200, Rows 100
 * Color Preset: One Dark (need import)
