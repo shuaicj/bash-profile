@@ -45,3 +45,6 @@ if [ -f /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion
 fi
 
+# MacPorts path
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
