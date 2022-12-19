@@ -1,9 +1,21 @@
 # http
-export http_proxy="http://proxy-host:proxy-port"
+HTTP_PROXY_HOST="proxy-host"
+HTTP_PROXY_PORT="proxy-port"
+export HTTP_PROXY="http://$HTTP_PROXY_HOST:$HTTP_PROXY_PORT"
 
 # https
-export https_proxy="http://proxy-host:proxy-port"
+HTTPS_PROXY_HOST="$HTTP_PROXY_HOST"
+HTTPS_PROXY_PORT="$HTTP_PROXY_PORT"
+export HTTPS_PROXY="http://$HTTPS_PROXY_HOST:$HTTPS_PROXY_PORT"
 
 # minikube exclusions
-export no_proxy="localhost,127.0.0.1,10.96.0.0/12,192.168.99.0/24,192.168.39.0/24"
+export NO_PROXY="localhost,127.0.0.1,10.96.0.0/12,192.168.99.100,192.168.99.0/24,192.168.39.0/24"
+
+# compatibility
+export http_proxy="$HTTP_PROXY"
+export https_proxy="$HTTPS_PROXY"
+export no_proxy="$NO_PROXY"
+
+# maven
+export MN_OPTS="-Dhttp.proxyHost=$HTTP_PROXY_HOST -Dhttp.proxyPort=$HTTP_PROXY_PORT -Dhttps.proxyHost=$HTTPS_PROXY_HOST -Dhttps.proxyPort=$HTTPS_PROXY_PORT"
 
