@@ -5,11 +5,11 @@ DIR="$( dirname $( readlink "${BASH_SOURCE[0]}" ) )"
 export LANG=C
 
 # termial line prefix
-export PS1="\[\e[36m\]\u \[\e[34m\]\W \\$\[\e[0m\] "
+export PS1="\[\e[0;33m\]\u \[\e[0;36m\]\w \[\e[1;31m\]> \[\e[0m\]"
 
 # add current dir in iTerm2 tab title
 if [ "$ITERM_SESSION_ID" ]; then
-  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+    export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
 fi
 
 # enable color display
