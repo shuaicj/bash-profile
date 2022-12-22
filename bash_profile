@@ -31,7 +31,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # alias
 alias ll='ls -la'
 alias tree='tree -C'
-alias httpy='python -m SimpleHTTPServer 8080'
+alias httpy='python3 -m http.server 8000'
 alias sson="export ALL_PROXY=socks5://127.0.0.1:1080"
 alias ssoff="unset ALL_PROXY"
 alias k="kubectl --kubeconfig=/Users/shuai/.kube/config.rdb -n fws-testing-1"
